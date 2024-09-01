@@ -19,5 +19,5 @@ cron.schedule('* * * * *', () => {
     let hours = date_ob.getHours();
     let minutes = date_ob.getMinutes();
 
-    sendPost(hours + ":" + minutes)
+    sendPost(`São ${hours} e ${minutes} minutos.`)
 });
