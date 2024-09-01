@@ -4,7 +4,7 @@ var cron = require('node-cron');
 async function sendPost(text) {
     const agent = new BskyAgent({ service: "https://bsky.social" });
     await agent.login({
-      identifier: "blgianini.bsky.social",
+      identifier: "relogioatualizado.bsky.social",
       password: "Familia8!#$",
     });
     await agent.post({ text });
