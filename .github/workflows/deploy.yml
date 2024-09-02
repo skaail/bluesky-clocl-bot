@@ -37,6 +37,6 @@ jobs:
       - name: Upload to Deno Deploy
         uses: denoland/deployctl@v1
         with:
-          project: "skaail-bluesky-clo-79"
+          project: "skaail-bluesky-clo-61"
           entrypoint: "index.js"
           root: ""
