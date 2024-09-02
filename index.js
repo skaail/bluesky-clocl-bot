@@ -1,5 +1,6 @@
 const { BskyAgent } = require("@atproto/api");
 var cron = require('node-cron');
+const moment = require('moment-timezone');
 
 async function sendPost(text) {
     const agent = new BskyAgent({ service: "https://bsky.social" });
@@ -14,10 +15,9 @@ async function sendPost(text) {
 
 
 cron.schedule('* * * * *', () => {
-    let date_ob = new Date();
 
-    let hours = date_ob.getHours();
-    let minutes = date_ob.getMinutes();
-
-    sendPost(`São ${hours - 3} horas e ${minutes} minutos.`)
+  const now = moment().tz('America/Sao_Paulo');
+  const hour = now.format('HH');
+  const minute = now.format('mm');
+  sendPost(`Horário Atual: ${hour}:${minute}`);
 });
