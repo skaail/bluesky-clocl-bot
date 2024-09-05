@@ -6,7 +6,7 @@ async function sendPost(text) {
     const agent = new BskyAgent({ service: "https://bsky.social" });
     await agent.login({
       identifier: "relogioatualizado.bsky.social",
-      password: "Familia8!#$",
+      password: "2wm3-3zdk-wysn-mfzh",
     });
     await agent.post({ text });
     console.log(`Post feito: ${text}`)
